@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waggle Way</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/services.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <script src="../js/login.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html" class="logos"><i class="fas fa-dog"></i>Waggle<span>Way</span></a>
+        <nav class="nav-bar">
+            <a href="../index.html">Home</a>
+            <a href="../pages/service.html">Services</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn" id="pricingBtn">Pricing</a>
+                <div class="dropdown-content" id="pricingOptions">
+                    <a href="../pages/pricing1.html" onclick="showPricing('basic')">Pet Grooming</a>
+                    <a href="../pages/pricing2.html" onclick="showPricing('premium')">Pet Boarding & Sitting</a>
+                    <a href="../pages/pricing3.html" onclick="showPricing('enterprise')">Pet Training</a>
+                </div>
+            </div>
+            <a href="../pages/about.html">About Us</a>
+            <a href="../pages/contact.html">Contact Us</a>
+        </nav>
+        <div class="accounts">
+            <i id="menu-btn" class="fa-solid fa-user login-icon"></i>
+            <div id="accountDropdown" class="dropdown-content-login">
+                <!-- This will be dynamically populated by JavaScript -->
+            </div>
+        </div>
+    </header>
+ 
+ 
+    <div class="contactheader">
+        <h1>Contact Us</h1>
+        <p class="contact-description">We'd love to hear from you! Whether you have a question about our services, need assistance, or just want to give feedback, you can reach us using the form below or through our contact details.</p>
+    </div>
+    
+    <div class="contacts">
+        <div class="phone">
+            <i id="headphone" class="fa-solid fa-headphones"></i>
+            <br>
+            <p class="center1">
+                People can Chat with our support
+            </p>
+            <!-- Link to WhatsApp chat -->
+            <a href="https://wa.me/917021320464" class="btn" target="_blank">
+                Chat with us on WhatsApp: 7021320464
+            </a>
+        </div>
+     <div class="email">
+         
+         <i  id="envelope" class="fa-regular fa-envelope"></i>
+         <p class="center2">
+             Use this Email to send us about the problem faced at ayushipanchal684@gmail.com
+         </p>
+      </div>
+     <div class="businesshours">
+         <i   id="phone"class="fa-solid fa-phone"></i>
+         <!-- Displaying text at
+             the center of the box-->
+         <p class="center3">
+             Toll Free Number:+1800 200 300 400
+         </p>
+ </div>
+     
+ 
+ 
+ </div>
+ <div  class="headingofcontact" >
+     <span ID="contactform"> Contact Form</span>
+ </div>
+ <div class="contactform">
+     
+     
+     <form action="../php/contact.php" method="POST">
+        
+         <h3>Fill Up This Form</h3>
+         
+         <label for="name">Full Name</label>
+         <input type="text" id="name" name="name" placeholder="Enter Your Full Name" class="box" required>
+         
+         <label for="email">Email</label>
+         <input type="email" id="email" name="email" placeholder="Enter Your Email" class="box" required>
+         
+         <label for="message">Message</label>
+         <textarea id="message" name="message" cols="30" rows="10" placeholder="Write About Your Problem" class="problem" required></textarea>
+         
+         <input type="submit" value="Send Us" class="btn">
+     </form>
+     
+ </div>
+ 
+ <section class="footer">
+    <div class="footer-content">
+        <h3 class="logos">
+            <i class="fas fa-dog"></i> Waggle <span>Way</span>
+        </h3>
+        <p>WaggleWay is a pet caring shop where we provide facilities and various useful treatments. We offer massages, a good ground, expert staff, good facilities, and much more! Visit us anytime :). We are closed only on Thursday and our regular timings are 9:00AM to 10:00PM.</p>
+        <ul class="socials">
+            <li><a href="https://www.facebook.com/your-facebook-link" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/your-instagram-link" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://plus.google.com/your-google-plus-link" target="_blank"><i class="fa-brands fa-google-plus-g"></i></a></li>
+            <li><a href="https://www.youtube.com/your-youtube-link" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/your-linkedin-link" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
+    </div>
+</section>
+<div class="footer-bottom">
+    <p>Copyright &copy; 2024 <a href="#">Ayushi Panchal</a> - WaggleWay</p>
+</div>
+ 
+ 
+ 
+     
+ </body>
+ </html>

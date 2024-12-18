@@ -1,0 +1,93 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #eaf2f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.welcome-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 25px;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.welcome-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+    transform: rotate(-30deg);
+    opacity: 0.3;
+    z-index: 0;
+}
+.welcome-card h2 {
+    font-size: 2em;
+    color: #4a90e2;
+    margin-bottom: 15px;
+    z-index: 1;
+}
+.welcome-card p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #666;
+    z-index: 1;
+}
+.welcome-card .btn {
+    display: inline-block;
+    background-color: #4a90e2;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1;
+}
+.welcome-card .btn:hover {
+    background-color: #357abd;
+    transform: scale(1.05);
+}
+.welcome-card p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+    text-align: center;
+    position: relative;
+    padding: 0 20px;
+}
+
+.welcome-card p::before {
+    content: "“";
+    font-size: 3em;
+    color: #4a90e2;
+    position: absolute;
+    left: 10px;
+    top: -20px;
+    z-index: 0;
+}
+
+.welcome-card p::after {
+    content: "”";
+    font-size: 3em;
+    color: #4a90e2;
+    position: absolute;
+    right: 10px;
+    bottom: -20px;
+    z-index: 0;
+}

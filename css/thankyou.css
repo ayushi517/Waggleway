@@ -1,0 +1,57 @@
+/* thankyou.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.thank-you-container {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 80px;
+}
+
+.thank-you-container h1 {
+    color: #4caf50; /* Green color for thank you message */
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.thank-you-container p {
+    color: #333;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.home-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #4caf50; /* Green button */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.home-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

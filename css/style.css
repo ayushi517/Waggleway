@@ -1,0 +1,617 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+/* Global reset and basic styles */
+html, body {
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.header {
+    background-color: black;
+    color: #333;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header .logos {
+    text-decoration: none;
+    color: #c4890b;
+    display: flex;
+    align-items: center;
+}
+
+.header .logos i {
+    font-size: 1.5rem;
+    margin-right: 5px;
+}
+
+.header .logos span {
+    color: #dfb80e;
+    font-size: 2.5rem;
+}
+
+.nav-bar {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #f5ebeb;
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #222222;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover { background-color: #b9a6a675 }
+
+.dropdown:hover .dropdown-content { display: block; }
+
+.dropdown:hover .dropbtn { background-color: #f0cbcb; }
+
+.login-container {
+    position: relative;
+    display: inline-block;
+}
+
+.login-icon {
+    font-size: 24px;
+    color: #f5ebeb;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.login-icon:hover + .dropdown-content-login,
+.dropdown-content-login:hover {
+    display: block;
+}
+
+.dropdown-content-login {
+    display: none;
+    position: absolute;
+    background-color: #252424;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+}
+
+.dropdown-content-login a {
+    color: rgb(245, 236, 236);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content-login a:hover {
+    background-color: #b37d7d;
+}
+
+.nav-bar {
+    display: flex;
+    gap: 20px;
+    align-items: center; /* Ensure items are centered vertically */
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #f5ebeb;
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center; /* Ensure text is centered vertically */
+}
+
+.nav-bar a:hover {
+    background-color: #a07a7a;
+    border-radius: 4px;
+}
+
+.nav-bar a.home {
+    color: #FFB100;
+}
+
+#menu-btn {
+
+    color: #eceff1;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+#menu-btn:hover {
+    color: #FFB100;
+}
+
+.hero {
+   
+    background-color: rgba(177, 166, 166, 0.5);
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    position: relative;
+}
+.overlay {
+    background: rgba(7, 6, 6, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+.hero h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.7em;
+    margin: 0;
+    margin-top: 10px;
+}
+.hero p {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+.hero .cta {
+    background-color: #FFA500;
+    color: white;
+    padding: 10px 20px;
+    
+    margin: 0 auto;  /* Center the line horizontally */
+    margin-top: 30px;
+    width: 15%;
+    height: 15%;
+    
+}
+.rating{
+    display: flex;
+    color: gold;
+    justify-content: center;
+
+ }
+
+.photos {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.headline span {
+    font-size: larger;
+}
+
+.headline .know-more {
+    font-size: 2rem;
+    display: block;
+    margin: 1rem 0;
+}
+
+.reviews {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+    margin: 50px auto 50px;
+}
+
+.review-card {
+    background-color: lightgray;
+    border: 1px solid #f7b1b1;
+    border-radius: 30px;
+    padding: 50px;
+    width: 30%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.review-card img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.review-card h3 {
+    margin: 10px 0 5px;
+}
+
+.review-card .role {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.review-card .rating {
+    margin-bottom: 10px;
+}
+
+.review-card .review {
+    font-size: 14px;
+    color: #555;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.8rem 2.8rem;
+    border-top-left-radius: 0;
+    border: 1px solid rgb(5, 5, 5);
+    border-radius: 5rem;
+    color: black;
+    cursor: pointer;
+    font-size: 1rem;
+    background: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.button:hover {
+    background: rgb(103, 101, 105);
+    border: 1px solid rgb(10, 10, 10);
+    color: rgb(241, 232, 232);
+    transition: 0.2s ease-in-out;
+}
+
+/* Example CSS for footer */
+.btn-primary {
+    background-color: #007BFF;
+    color: rgb(201, 176, 122);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #96c7fc;
+}
+.Client {
+   
+    font-size: 48px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    flex-direction: column; /* Align items vertically */
+    /* Or any specific height you want for the container */
+    text-shadow: 5px 5px rgb(231, 163, 163) ;
+  }
+  
+  .Client span {
+    margin-top: 9px; /* Push the span to the bottom */
+    text-align: center;
+    font-size: 50px;
+    
+  }
+  
+  
+  /* General Styles for Footer */
+.footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: 240px;
+    width: 100%;
+    padding-top: 10px; /* Reduced padding */
+    color: #fff;
+    flex: 1 1 45rem;   
+    clear: both; 
+}
+
+.footer .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer .footer-content p {
+    max-width: 85%;
+    margin: 10px auto;
+    line-height: 1.8;
+    font-size: 1.2rem; /* Reduced font size */
+    color: rgb(143, 139, 139);
+}
+
+.footer .socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 2rem 0; /* Reduced bottom margin */
+}
+
+.footer .socials li {
+    margin: 0 0.5rem; /* Margin between social icons */
+}
+
+.footer .socials a {
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem; /* Reduced padding */
+}
+
+.footer .socials a i {
+    font-size: 1.5rem; /* Reduced icon size */
+    transition: color .4s ease;
+}
+
+.footer .socials a:hover i {
+    color: aqua;
+}
+
+/* Footer Bottom Styles */
+.footer-bottom {
+    background: #000;
+    width: 100%;
+    padding: 10px; /* Adjusted padding */
+    text-align: center;
+}
+
+.footer-bottom p {
+    word-spacing: 1px; /* Adjusted word spacing */
+    color: #666;
+    text-transform: capitalize;
+    font-size: 1rem; /* Reduced font size */
+}
+
+.footer-bottom p a {
+    color: #68cdf5;
+    font-size: 1rem; /* Reduced font size */
+    text-decoration: none;
+}
+
+.footer-bottom span {
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+/* Footer Logo Styles */
+.footer .logos {
+    text-decoration: none;
+    color: #c4890b;
+    display: flex;
+    align-items: center;
+}
+
+.footer .logos i {
+    font-size: 1.5rem; /* Adjust icon size */
+    margin-right: 5px; /* Space between icon and text */
+}
+
+.footer .logos span {
+    color: #dfb80e; /* Color for the span text */
+    font-size: 2.5rem; /* Font size for the span text */
+}
+
+
+.how-we-work {
+    padding: 50px 0;
+    
+}
+
+.how-we-work .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.how-we-work .steps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.how-we-work .step {
+    flex: 1;
+    max-width: 300px;
+    margin: 0 20px;
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border: 2px solid #ddd; /* Added border */
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added shadow transition */
+}
+
+.how-we-work .step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+.how-we-work .step .icon img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.how-we-work .step h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #f18f0e;
+}
+
+.how-we-work .step p {
+    font-size: 1rem;
+    color: #777;
+}
+.login {
+    background-color:transparent;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+    margin-top:100px;
+    position: relative;
+    top: 20px; /* Move down */
+    left: 490px; /
+  
+}
+
+.login h2 {
+    margin-bottom: 20px;
+    color: #070707;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.login input[type="text"],
+.login input[type="email"],
+.login input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border 0.3s;
+}
+
+.login input[type="text"]:focus,
+.login input[type="email"]:focus,
+.login input[type="password"]:focus {
+    border-color: #66afe9;
+    outline: none;
+}
+
+.login input[type="submit"] {
+    width: 100%;
+    padding: 12px 0;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.login input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.links a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.links p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .login {
+        width: 90%;
+        padding: 20px;
+    }
+}
+/* General styling for the account section */
+.accounts {
+    position: relative;
+    display: inline-block;
+}
+
+/* Styling for the user icon */
+.login-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: #333; /* You can adjust the color as needed */
+}
+
+/* Hide the dropdown content by default */
+.dropdown-content-login {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Style the dropdown links/buttons */
+.dropdown-content-login a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content-login a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show the dropdown content when the user clicks the icon */
+.accounts:hover .dropdown-content-login {
+    display: block;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+}

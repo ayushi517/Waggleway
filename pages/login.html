@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaggleWay</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html" class="logos"><i class="fas fa-dog"></i>Waggle<span>Way</span></a>
+        <nav class="nav-bar">
+            <a href="../index.html">Home</a>
+            <a href="../pages/service.html">Services</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn" id="pricingBtn">Pricing</a>
+                <div class="dropdown-content" id="pricingOptions">
+                    <a href="../pages/pricing1.html" onclick="showPricing('basic')">Pet Grooming</a>
+                    <a href="../pages/pricing2.html" onclick="showPricing('premium')">Pet Boarding & Sitting</a>
+                    <a href="../pages/pricing3.html" onclick="showPricing('enterprise')">Pet Training</a>
+                </div>
+            </div>
+            <a href="../pages/about.html">About Us</a>
+            <a href="../pages/contact.html">Contact Us</a>
+        </nav>
+        <div class="accounts">
+            <i id="menu-btn" class="fa-solid fa-user login-icon"></i>
+            <div id="accountDropdown" class="dropdown-content-login">
+                <!-- This will be dynamically populated by JavaScript -->
+            </div>
+        </div>
+    </header>
+
+    <div class="login">
+        <h2>Login</h2>
+        <p id="message" class="message"></p>
+        <form id="loginForm" action="../php/login.php" method="post" onsubmit="return validateForm()">
+            <input type="text" name="userid" placeholder="User ID" required>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+
+            <div class="password-container">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <span class="toggle-visibility" onclick="togglePasswordVisibility()">
+                    <i id="passwordIcon" class="fas fa-eye"></i>
+                </span>
+            </div>
+
+            <div class="password-container">
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required>
+                <span class="toggle-visibility" onclick="toggleConfirmPasswordVisibility()">
+                    <i id="confirmPasswordIcon" class="fas fa-eye"></i>
+                </span>
+            </div>
+
+            <input type="submit" value="Login">
+        </form>
+        <div class="links">
+            <a class="htmllinks" href="forgot_password.html">Forgot Password?</a>
+            <p>Don't have an account? <a class="htmllinks" href="../pages/register.html">Register here</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to get query parameters
+            function getQueryParam(param) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(param);
+            }
+
+            // Display message if present
+            const message = getQueryParam('message');
+            if (message) {
+                const messageElement = document.getElementById('message');
+                if (messageElement) {
+                    messageElement.textContent = decodeURIComponent(message);
+                }
+            }
+
+            // Handle redirect URL if it exists
+            const redirectUrl = getQueryParam('redirect');
+            if (redirectUrl) {
+                const form = document.getElementById('loginForm');
+                if (form) {
+                    form.action += `?redirect=${encodeURIComponent(redirectUrl)}`;
+                }
+            }
+        });
+
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById('password');
+            var passwordIcon = document.getElementById('passwordIcon');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                passwordIcon.classList.remove('fa-eye');
+                passwordIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                passwordIcon.classList.remove('fa-eye-slash');
+                passwordIcon.classList.add('fa-eye');
+            }
+        }
+
+        function toggleConfirmPasswordVisibility() {
+            var confirmPasswordInput = document.getElementById('confirm_password');
+            var confirmPasswordIcon = document.getElementById('confirmPasswordIcon');
+            if (confirmPasswordInput.type === 'password') {
+                confirmPasswordInput.type = 'text';
+                confirmPasswordIcon.classList.remove('fa-eye');
+                confirmPasswordIcon.classList.add('fa-eye-slash');
+            } else {
+                confirmPasswordInput.type = 'password';
+                confirmPasswordIcon.classList.remove('fa-eye-slash');
+                confirmPasswordIcon.classList.add('fa-eye');
+            }
+        }
+
+        function validateForm() {
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirm_password').value;
+            
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

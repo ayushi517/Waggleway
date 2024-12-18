@@ -1,0 +1,83 @@
+/* subscription.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.subscription-container {
+    margin-top: 100px;
+    width: 80%;
+   margin-left: 150px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+}
+
+h2 {
+    color: #34495e;
+    text-align: center;
+    margin-top: 0;
+}
+
+.subscription-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #ecf0f1;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    color: #2980b9;
+    margin-top: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+p {
+    color: #e74c3c;
+    text-align: center;
+    font-style: italic;
+}
+
+li {
+    background-color: #ffffff;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+li:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.date {
+    color: #2ecc71;
+}
+
+.service-type {
+    font-weight: bold;
+    color: #e67e22;
+}

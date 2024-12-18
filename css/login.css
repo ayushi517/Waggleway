@@ -1,0 +1,115 @@
+body {
+    background-image: url('../images/PET6.jpeg');
+}
+
+.login {
+    background-color: transparent;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+    margin-top: 100px;
+    position: relative;
+    top: 20px; /* Move down */
+    left: 490px; /* Adjust according to your layout */
+}
+
+.login h2 {
+    margin-bottom: 20px;
+    color: #3917d1;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.login input[type="text"],
+.login input[type="email"],
+.login input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border 0.3s;
+    position: relative; /* Required for absolute positioning of the icon */
+}
+
+.login input[type="text"]:focus,
+.login input[type="email"]:focus,
+.login input[type="password"]:focus {
+    border-color: #66afe9;
+    outline: none;
+}
+
+.login input[type="submit"] {
+    width: 100%;
+    padding: 12px 0;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.login input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.links a {
+    color: #dee0e2;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.links p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #cccccca2;
+}
+
+@media (max-width: 768px) {
+    .login {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+/* Styling for the password container */
+.password-container {
+    position: relative; /* This positions the icon inside the container */
+    margin: 10px 0;
+}
+
+/* Styling for the eye icon */
+.password-container .toggle-visibility {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #333; /* Adjust color as needed */
+    font-size: 20px;
+}
+
+.password-container .toggle-visibility i {
+    pointer-events: none; /* Ensure the icon doesn't capture clicks */
+}
+.message {
+    color: red;
+    font-size: 16px;
+    margin-bottom: 20px;
+}

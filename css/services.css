@@ -1,0 +1,179 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-right: -60px;
+}
+
+body{
+    background-image: url('../images/bg.jpg');
+}
+
+.contents {
+    max-width: 50%;
+    margin-top: 110px;
+    padding: 40px 20px;;
+}
+
+.contents h3 {
+    font-size: 48px;
+    color: #ec9d0bfd;
+    margin: 0 0 20px 0;
+    text-shadow: 2px 5px rgb(204, 184, 184) ;
+}
+
+.contents p {
+    font-size: 18px;
+    color: #555;
+}
+.image {
+    text-align: right;
+    margin-top: -270px;
+   margin-right: 100px;
+}
+.image img {
+    max-width: 450px;
+    height: auto;
+    border-radius: 8px;
+}
+.services {
+    display: flex;
+    justify-content:space-evenly; /* Space between the boxes */
+    align-items: stretch; /* Ensure all boxes have the same height */
+}
+
+.service-box1, .service-box2, .service-box3 {
+    width: 30%; /* Set width so three boxes fit in one row */
+    margin: 10px; /* Add margin between the boxes */
+    height: 500px; /* Ensure consistent height across boxes */
+}
+
+
+.service-headline{
+    color:  #ee9e0ada;
+    font-size: 50px;
+    text-align: center;
+    margin: 30px;
+    font-weight: bold;
+    text-transform:uppercase;
+    text-shadow: 2px 5px whitesmoke;
+}
+.service-box1 {
+    width: 350px;
+    background-image: url('../images/dogkennel.jpg'); /* Path to the uploaded image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color:white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 18px;
+    height: 500px; /* Set a fixed height for the box */
+    border: 3px solid  rgb(29, 27, 31);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.service-box1 h3 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.service-box1 p {
+    margin: 10px 0;
+    font-size: 17px;
+}
+
+
+
+
+
+.service-box2 {
+    width: 350px;
+    background-image: url('../images/dog_training.avif'); /* Path to the uploaded image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white ;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    height: 500px; /* Set a fixed height for the box */
+    border: 3px solid  rgb(58, 56, 59);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.service-box2 h3 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.service-box2 p {
+    margin: 10px 0;
+    font-size: 17px;
+}
+
+
+
+
+
+
+
+.service-box4 {
+    width: 350px;
+    background-image: url('../images/petgroom.jpg'); /* Path to the uploaded image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    height: 500px; /* Set a fixed height for the box */
+    border: 3px solid  rgb(58, 56, 59);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.service-box4 h3 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.service-box4 p {
+    margin: 10px 0;
+    font-size: 17px;
+}
+
+.book-now-btn {
+    
+    margin-bottom: 50px;
+    padding: 10px 20px; /* Ensure padding is as desired */
+    font-size: 16px; /* Keep the font size */
+    color: white;
+    background-color: #ee9e0a;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: stretch; /* Make the button take the full width */
+}
+
+.book-now-btn:hover {
+    background-color: #d87d0a;
+}
+
+
+
+
+
+

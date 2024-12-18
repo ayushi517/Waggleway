@@ -1,0 +1,71 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9fbe7; /* Very light yellow background */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.receipt-container {
+    max-width: 800px;
+    margin-top: 100px;
+    margin-left: 330px;
+    padding: 20px;
+    background-color: #ffffff; /* White background for the container */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #c5cae9; /* Light purple border */
+}
+
+.receipt-container h1 {
+    text-align: center;
+    color: #3f51b5; /* Indigo color for the heading */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.receipt-container p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #555; /* Dark gray text */
+}
+
+.receipt-container p strong {
+    color: #7e57c2; /* Light purple color for labels */
+}
+
+.receipt-container p:last-child {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #4caf50; /* Green color for total amount */
+    border-top: 3px solid #c5e1a5; /* Very light green border-top */
+    padding-top: 10px;
+}
+
+.receipt-container .highlight {
+    background-color: #e8f5e9; /* Light green background */
+    border-left: 5px solid #81c784; /* Light green border */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.receipt-container .highlight p {
+    margin: 0;
+    color: #388e3c; /* Dark green text */
+}
+
+@media screen and (max-width: 768px) {
+    .receipt-container {
+        padding: 15px;
+    }
+
+    .receipt-container h1 {
+        font-size: 1.8em;
+    }
+
+    .receipt-container p {
+        font-size: 1.1em;
+    }
+}

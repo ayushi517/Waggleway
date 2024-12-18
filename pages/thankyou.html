@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - WaggleWay</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/thankyou.css">
+    <script src="../js/login.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get booking_id, service_type, amount, and payment_status from URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const bookingId = urlParams.get('booking_id');
+            const serviceType = urlParams.get('service_type');
+            const amount = urlParams.get('amount');
+            const paymentStatus = urlParams.get('payment_status');
+    
+            console.log("Retrieved booking_id:", bookingId); // Debugging output
+            console.log("Retrieved service_type:", serviceType); // Debugging output
+            console.log("Retrieved amount:", amount); // Debugging output
+            console.log("Retrieved payment_status:", paymentStatus); // Debugging output
+            
+            // Check if parameters are available
+            if (bookingId && serviceType) {
+                // Display amount if available
+               
+    
+                // Display payment status
+                if (paymentStatus) {
+                    document.getElementById('payment-status').innerText = `Payment Status: ${paymentStatus}`;
+                } else {
+                    document.getElementById('payment-status').innerText = 'Payment status information not available.';
+                }
+    
+                // Set a delay for automatic redirection
+                setTimeout(function() {
+                    // Redirect to receipt.php with booking_id, service_type, amount, and payment_status as query parameters
+                    const redirectUrl = `../php/receipt.php?booking_id=${encodeURIComponent(bookingId)}&service_type=${encodeURIComponent(serviceType)}&amount=${encodeURIComponent(amount)}&payment_status=${encodeURIComponent(paymentStatus)}`;
+                    console.log("Redirecting to:", redirectUrl); // Debugging output
+                    window.location.href = redirectUrl;
+                }, 5000); // 5000 milliseconds = 5 seconds
+            } else {
+                console.error("booking_id or service_type is missing in the URL.");
+                document.getElementById('amount-display').innerText = 'Booking ID or service type is missing in the URL.';
+                document.getElementById('payment-status').innerText = 'Booking ID or service type is missing in the URL.';
+            }
+        });
+    </script>
+    
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html" class="logos"><i class="fas fa-dog"></i>Waggle<span>Way</span></a>
+        <nav class="nav-bar">
+            <a href="../index.html">Home</a>
+            <a href="../pages/service.html">Services</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn" id="pricingBtn">Pricing</a>
+                <div class="dropdown-content" id="pricingOptions">
+                    <a href="../pages/pricing1.html" onclick="showPricing('basic')">Pet Grooming</a>
+                    <a href="../pages/pricing2.html" onclick="showPricing('premium')">Pet Boarding & Sitting</a>
+                    <a href="../pages/pricing3.html" onclick="showPricing('enterprise')">Pet Training</a>
+                </div>
+            </div>
+            <a href="../pages/about.html">About Us</a>
+            <a href="../pages/contact.html">Contact Us</a>
+        </nav>
+        <div class="accounts">
+            <i id="menu-btn" class="fa-solid fa-user login-icon"></i>
+            <div id="accountDropdown" class="dropdown-content-login">
+                <!-- This will be dynamically populated by JavaScript -->
+            </div>
+        </div>
+    </header>
+
+    <div class="thank-you-container">
+        <h1>Thank You!</h1>
+        <p>Your payment has been successfully processed. We appreciate your business!</p>
+        <p>If you have any questions or need further assistance, feel free to contact us.</p>
+        <p>You will be redirected to your receipt page shortly.</p>
+        <p id="amount-display"></p> <!-- Display amount here -->
+        <p id="payment-status"></p> <!-- Display payment status here -->
+        <a href="#" id="receipt-link" class="home-btn">Go to Receipt Page Now</a>
+        <!-- Link for manual navigation, initially set to the current page -->
+    </div>
+
+   
+
+    <script>
+        // Ensure the link for manual navigation redirects to the receipt page
+        document.getElementById('receipt-link').addEventListener('click', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const bookingId = urlParams.get('booking_id');
+            const serviceType = urlParams.get('service_type');
+            const amount = urlParams.get('amount');
+            const paymentStatus = urlParams.get('payment_status');
+            console.log("Retrieved booking_id:", bookingId); // Debugging output
+console.log("Retrieved service_type:", serviceType); // Debugging output
+console.log("Retrieved amount:", amount); // Debugging output
+console.log("Retrieved payment_status:", paymentStatus); // Debugging output
+
+            
+            if (bookingId && serviceType) {
+                window.location.href = `../php/receipt.php?booking_id=${encodeURIComponent(bookingId)}&service_type=${encodeURIComponent(serviceType)}&amount=${encodeURIComponent(amount)}&payment_status=${encodeURIComponent(paymentStatus)}`;
+            } else {
+                alert("Booking ID or service type is missing.");
+            }
+        });
+    </script>
+</body>
+</html>
